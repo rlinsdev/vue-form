@@ -8,7 +8,7 @@
   <button @click="redirect">Redirect</button>
   <button @click="back">Go back</button>
   <button @click="foward">Go foward</button>
-<!-- <router-view/> -->
+<router-view/>
 </template>
 
 <script>

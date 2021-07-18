@@ -12,13 +12,16 @@
 export default {
   data() {
     return {
-      jobs:[
-        {title: 'Ninja UX Designer', id:'1', details: 'Lorem'},
-        {title: 'Ninja Web Developer', id:'2', details: 'Lorem'},
-        {title: 'Ninja Vue Developer', id:'3', details: 'Lorem'}
-      ]
+      //jobs:[]
+      jobs:[ ]
     }
   },
+  monted() {
+    fetch('http://localhost:3000/jobs')
+      .then(res=>res.json())
+      .then(data => this.jobs = data)
+      .catch(err => console.log(err.message))
+  }
   // methods:{
   //   jobDetail(id){
   //     this.$router.push({ name: 'JobsDetails', params: { id: id } })
