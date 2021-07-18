@@ -5,12 +5,12 @@
 
 <script>
 export default {
-  data(){
+  props: ['id'],
+  data() {
     return{
       id:this.$route.params.id
     }
   }
-
 }
 </script>
 
